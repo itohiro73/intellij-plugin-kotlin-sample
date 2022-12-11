@@ -5,12 +5,17 @@
     <vendor>itohiro73</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
 <!--        <applicationService serviceImplementation="com.github.itohiro73.intellijpluginkotlinsample.services.MyApplicationService"/>-->
 <!--        <projectService serviceImplementation="com.github.itohiro73.intellijpluginkotlinsample.services.MyProjectService"/>-->
         <toolWindow id="hello" anchor="right"
                     factoryClass="com.github.itohiro73.intellijpluginkotlinsample.services.MyToolWindowFactory" />
+        <moduleBuilder
+                builderClass="com.github.itohiro73.intellijpluginkotlinsample.module.IntellijPluginModuleBuilder"
+                id="intellijPluginWizard"
+                order="first"/>
     </extensions>
 
     <applicationListeners>
