@@ -18,6 +18,20 @@
                 order="first"/>
     </extensions>
 
+    <actions>
+        <action
+                id="org.intellij.sdk.action.PopupDialogAction"
+                class="com.github.itohiro73.intellijpluginkotlinsample.action.ChatGptPopupDialogAction"
+                text="Chat GPT Query"
+                description="SDK action example">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut
+                    keymap="$default"
+                    first-keystroke="control alt G"
+                    />
+        </action>
+    </actions>
+
     <applicationListeners>
 <!--        <listener class="com.github.itohiro73.intellijpluginkotlinsample.listeners.MyProjectManagerListener"-->
 <!--                  topic="com.intellij.openapi.project.ProjectManagerListener"/>-->

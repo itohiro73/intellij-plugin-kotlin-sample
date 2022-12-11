@@ -40,6 +40,10 @@ intellij {
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
     downloadSources.set(true)
+    dependencies {
+        implementation("com.squareup.okhttp3:okhttp:4.10.0")
+        implementation("com.squareup.moshi:moshi:1.14.0")
+    }
 }
 
 // Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
